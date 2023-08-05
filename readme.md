@@ -35,7 +35,10 @@ Baixando a imagem criada para uso em sua máquina
 docker pull luissimon96/node-web-app:0.1
 ````
 
+Build: construir a imagem, foi utilizado o seguinte repo para a config: https://docs.docker.com/language/nodejs/configure-ci-cd/
+
 próximo passo criar um fluxo para utilizar o github actions para:
-Build: construir a imagem;
+
+
 
 Deploy: Implantar o pacote já construido;
