@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desafio-kubernetes-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: desafio-kubernetes
+  template:
+    metadata:
+      labels:
+        app: desafio-kubernetes
+    spec:
+      containers:
+        - name: desafio-kubernetes-container
+          imagePullPolicy: Never
+          image: luissimon96/node-web-app:latest
+          resources:
+              limits:
+                  cpu: 50m
+                  memory: 100Mi
+              requests:
+                  cpu: 25m
+                  memory: 10Mi
+          ports:
+              - containerPort: 3000
