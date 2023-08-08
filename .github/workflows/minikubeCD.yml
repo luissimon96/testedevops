@@ -11,6 +11,10 @@ jobs:
       uses: medyagh/setup-minikube@master
     - name: Try the cluster !
       run: kubectl get pods -A
+    - name: Validation Path
+      run: |
+        pwd
+        ls -ltrh
     #- name: Build image
     #  run: |
     #    export SHELL=/bin/bash
