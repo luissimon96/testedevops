@@ -33,4 +33,4 @@ jobs:
         minikube service list
         minikube service desafio-kubernetes
         echo "------------------opening the service------------------"
-        curl $(minikube service desafio-kubernetes)        
+        curl $(minikube service desafio-kubernetes --url)        
