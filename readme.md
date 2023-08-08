@@ -17,8 +17,6 @@ porta: 3000
 
 ## Execução do Desafio Luis Simon
 
-Link utilizado para configuração do Dockerfile e empacotamento de um container contendo a aplicação: https://nodejs.org/en/docs/guides/nodejs-docker-webapp
-
 Comandos utilizados:
 Para buildar a imagem localmente
 ````
@@ -41,7 +39,7 @@ Para buildar uma nova versão deve apenas atualizar qualquer arquivo na master q
 
 próximo passo criar um fluxo para utilizar o github actions para:
 
-## Deploy: Implantar o pacote já construido;
+## Deploy: Implantar o pacote já construido localmente;
 
 Realizado o com sucesso após isso para conseguir acessar com o seguinte ambiente:
 minikube v1.31.1
@@ -80,4 +78,25 @@ RawContentLength  : 16
 ````
 
 E via Browser Google Chrome Versão 115.0.5790.111
-![Alt text](image.png)
+![Resultado local](image.png)
+
+# Processo de execução
+
+## Build
+Para realizar o build de uma nova versão é necessário somente executar um push na branch master para iniciar o workflow de CI
+
+## Deploy
+O deploy pode ser realizado acessando a aba Actions > cd
+![Acesso a Pipeline CD](image-1.png)
+
+e logo após clicar em "Run workflow"
+![Rodando Pipeline CD](image-2.png)
+
+Resultado da execução:
+![Passo 1](image-3.png)
+![Passo 2](image-4.png)
+![Passo 3](image-5.png)
+
+![Resultado](image-6.png)
+
+A imagem pode ser acessado via link: https://hub.docker.com/repository/docker/luissimon96/node-web-app/general
