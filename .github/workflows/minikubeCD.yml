@@ -19,15 +19,14 @@ jobs:
     #    echo -n "verifying images:"
     #    docker images        
     - name: Deploy to minikube
-      run:
+      run: |
         kubectl apply -f deploy/deployment.yaml
         kubectl apply -f deploy/service.yaml
         kubectl apply -f deploy/ingress.yaml
-        kubectl apply -f deploy/virtualservice.yaml
         kubectl apply -f deploy/configmap.yaml
     - name: Test service URLs
       run: |
         minikube service list
-        minikube service example --url
+        minikube service desafio-kubernetes
         echo "------------------opening the service------------------"
-        curl $(minikube service example --url)        
+        curl $(minikube service desafio-kubernetes)        
