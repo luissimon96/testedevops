@@ -11,8 +11,10 @@ jobs:
       uses: medyagh/setup-minikube@master
     - name: Try the cluster !
       run: kubectl get pods -A
-    - name: Active minikube tunner
-      run: minikube tunnel
+    - name: Active minikube tunnel
+      run: minikube tunnel &
+    - name: Active insgress
+      run: minikube addons enable ingress
     - name: Validation Path
       run: |
         pwd
