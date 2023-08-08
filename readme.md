@@ -77,7 +77,7 @@ ParsedHtml        : System.__ComObject
 RawContentLength  : 16
 ````
 
-E via Browser Google Chrome Versão 115.0.5790.111
+E via Browser Google Chrome Versão 115.0.5790.111<br>
 ![Resultado local](image.png)
 
 # Processo de execução
@@ -92,7 +92,7 @@ O deploy pode ser realizado acessando a aba Actions > cd
 e logo após clicar em "Run workflow"
 ![Rodando Pipeline CD](image-2.png)
 
-Resultado da execução:
+Resultado da execução<br>
 ![Passo 1](image-3.png)
 ![Passo 2](image-4.png)
 ![Passo 3](image-5.png)
