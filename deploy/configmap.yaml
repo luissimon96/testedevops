@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: desafio-kubernetes
+  namespace: default
 data:
   NAME: "LUIS_SIMON"
   LOG_PATH: "/tmp/logs"
