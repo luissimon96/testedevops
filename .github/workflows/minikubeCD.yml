@@ -37,7 +37,9 @@ jobs:
         sleep 2m 30s
     - name: Test service URLs
       run: |
+        echo "------------------service list------------------"
         minikube service list
+        echo "------------------service desafio-kubernetes------------------"
         minikube service desafio-kubernetes
         echo "------------------opening the service------------------"
         curl $(minikube service desafio-kubernetes --url)        
