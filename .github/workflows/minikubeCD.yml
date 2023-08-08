@@ -1,4 +1,4 @@
-name: CI
+name: cd
 on:
   workflow_dispatch:
 jobs:
@@ -11,13 +11,13 @@ jobs:
       uses: medyagh/setup-minikube@master
     - name: Try the cluster !
       run: kubectl get pods -A
-    - name: Build image
-      run: |
-        export SHELL=/bin/bash
-        eval $(minikube -p minikube docker-env)
-        docker build -f ./Dockerfile -t luissimon96/node-web-app .
-        echo -n "verifying images:"
-        docker images        
+    #- name: Build image
+    #  run: |
+    #    export SHELL=/bin/bash
+    #    eval $(minikube -p minikube docker-env)
+    #    docker build -f ./Dockerfile -t luissimon96/node-web-app .
+    #    echo -n "verifying images:"
+    #    docker images        
     - name: Deploy to minikube
       run:
         kubectl apply -f deploy/deployment.yaml

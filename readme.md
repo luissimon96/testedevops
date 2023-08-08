@@ -41,4 +41,43 @@ Para buildar uma nova versão deve apenas atualizar qualquer arquivo na master q
 
 próximo passo criar um fluxo para utilizar o github actions para:
 
-Deploy: Implantar o pacote já construido;
+## Deploy: Implantar o pacote já construido;
+
+Realizado o com sucesso após isso para conseguir acessar com o seguinte ambiente:
+minikube v1.31.1
+Docker Desktop 4.22.0
+Microsoft Windows 11 Home 10.0.22621.1992 Build 22621.1992
+
+````
+kubectl apply -f .
+````
+````
+minikube tunnel
+````
+
+obtivemos o seguinte resultado:
+````
+curl -v localhost
+------------------
+StatusCode        : 200
+StatusDescription : OK
+Content           : Olá LUIS_SIMON!
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Content-Length: 16
+                    Content-Type: text/html; charset=utf-8
+                    Date: Tue, 08 Aug 2023 02:37:17 GMT
+                    ETag: W/"10-7shNgo2aVAsAJCqJ3hLZb5Z+xFw"
+                    X-Powered-By: Expres...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Content-Length, 16], [Content-Type, text/html; charset=utf-8], [Date, Tue, 08 Aug 2023   
+                    02:37:17 GMT]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : System.__ComObject
+RawContentLength  : 16
+````
+
+E via Browser Google Chrome Versão 115.0.5790.111
+![Alt text](image.png)
