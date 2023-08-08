@@ -11,6 +11,8 @@ jobs:
       uses: medyagh/setup-minikube@master
     - name: Try the cluster !
       run: kubectl get pods -A
+    #- name: Active minikube tunner
+    #  run: minikube tunnel
     - name: Validation Path
       run: |
         pwd
@@ -28,6 +30,9 @@ jobs:
         kubectl apply -f deploy/service.yaml
         kubectl apply -f deploy/ingress.yaml
         kubectl apply -f deploy/configmap.yaml
+    - name: Wating starter applications
+      run: |
+        sleep 2m 30s
     - name: Test service URLs
       run: |
         minikube service list
