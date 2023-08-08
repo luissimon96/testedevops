@@ -1,13 +1,16 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: desafio-kubernetes-virtualservice
+  name: desafio-kubernetes
 spec:
   hosts:
     - "*"
   http:
-    - route:
-        - destination:
-            host: desafio-kubernetes-service.default.svc.cluster.local # nome do serviço criado no passo anterior.
-            port:
-              number: 3000 
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: desafio-kubernetes # nome do serviço criado no passo anterior.
+        port:
+          number: 3000 

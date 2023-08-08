@@ -1,7 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: desafio-kubernetes-deployment
+  name: desafio-kubernetes
+  labels:
+    app: desafio-kubernetes
 spec:
   replicas: 1
   selector:
@@ -13,9 +15,12 @@ spec:
         app: desafio-kubernetes
     spec:
       containers:
-        - name: desafio-kubernetes-container
-          imagePullPolicy: Never
+        - name: desafio-kubernetes
           image: luissimon96/node-web-app:latest
+          #imagePullPolicy: Never
+          envFrom:
+          - configMapRef:
+              name: desafio-kubernetes # primeiro precisa do config disponível no cluster
           resources:
               limits:
                   cpu: 50m
