@@ -13,8 +13,8 @@ jobs:
       run: kubectl get pods -A
     - name: Active minikube tunnel
       run: minikube tunnel &
-    - name: Active insgress
-      run: minikube addons enable ingress
+    #- name: Active insgress
+    #  run: minikube addons enable ingress
     - name: Validation Path
       run: |
         pwd
