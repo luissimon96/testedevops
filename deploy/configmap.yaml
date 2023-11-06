@@ -4,7 +4,7 @@ metadata:
   name: desafio-kubernetes
   namespace: default
 data:
-  NAME: "LUIS_EDUARDO_SIMON"
+  NAME: "Batatinha"
   LOG_PATH: "/tmp/logs"
   APPLICATION_NAME: "desafio-kubernetes"
   CONTEXT_PATH: "/"
