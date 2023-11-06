@@ -2,7 +2,7 @@ FROM node:18
 
 # Create app directory
 WORKDIR /usr/src/app
-ENV NAME=LUIS_SIMON
+ENV NAME=Batatinha
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
